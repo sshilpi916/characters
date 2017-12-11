@@ -1,6 +1,8 @@
-#version 0.0.1
+#version 0.1
 FROM ubuntu:16.04
-MAINTAINER Sri Harsha Vathsavayi "sriharsha.vathsavayi@csc.fi"
+
+#maintainer information
+LABEL maintainer="sriharsha.vathsavayi@csc.fi"
 
 # update the apt package manager
 RUN apt-get update     
@@ -18,4 +20,4 @@ COPY ./ /opt/character_count/
 WORKDIR /opt/character_count
 
 # default command to execute when container starts 
-CMD ["/bin/bash"]
+CMD /bin/bash
